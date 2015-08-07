@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    benchmark-ips (2.3.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  benchmark-ips (~> 2.3.0)
+
+BUNDLED WITH
+   1.10.6
