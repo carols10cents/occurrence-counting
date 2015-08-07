@@ -1,0 +1,290 @@
+Benching with array of length 10
+Calculating -------------------------------------
+          uniq-count     6.888k i/100ms
+           hash-each    17.645k i/100ms
+         reduce-to-i    16.054k i/100ms
+              inject    16.126k i/100ms
+               chunk     6.247k i/100ms
+         reduce-or-0    16.313k i/100ms
+  each-with-hash-new    16.518k i/100ms
+each-with-empty-hash    13.847k i/100ms
+          map-inject     3.548k i/100ms
+            group-by     8.841k i/100ms
+     group-by-itself     8.737k i/100ms
+     chunk-by-itself     6.127k i/100ms
+-------------------------------------------------
+          uniq-count     72.334k (± 6.4%) i/s -    723.240k
+           hash-each    196.484k (± 4.8%) i/s -      1.976M
+         reduce-to-i    172.061k (± 7.4%) i/s -      1.718M
+              inject    182.517k (± 3.9%) i/s -      1.838M
+               chunk     64.662k (± 7.0%) i/s -    649.688k
+         reduce-or-0    186.122k (± 4.1%) i/s -      1.860M
+  each-with-hash-new    182.643k (± 7.8%) i/s -      1.817M
+each-with-empty-hash    142.116k (± 7.2%) i/s -      1.426M
+          map-inject     36.061k (± 4.9%) i/s -    361.896k
+            group-by     91.551k (± 7.6%) i/s -    910.623k
+     group-by-itself     91.932k (± 4.5%) i/s -    917.385k
+     chunk-by-itself     64.254k (± 5.0%) i/s -    643.335k
+
+Comparison:
+           hash-each:   196483.7 i/s
+         reduce-or-0:   186121.9 i/s - 1.06x slower
+  each-with-hash-new:   182642.5 i/s - 1.08x slower
+              inject:   182517.4 i/s - 1.08x slower
+         reduce-to-i:   172060.5 i/s - 1.14x slower
+each-with-empty-hash:   142116.3 i/s - 1.38x slower
+     group-by-itself:    91932.0 i/s - 2.14x slower
+            group-by:    91551.4 i/s - 2.15x slower
+          uniq-count:    72333.9 i/s - 2.72x slower
+               chunk:    64662.4 i/s - 3.04x slower
+     chunk-by-itself:    64254.0 i/s - 3.06x slower
+          map-inject:    36061.0 i/s - 5.45x slower
+
+Benching with array of length 100
+Calculating -------------------------------------
+          uniq-count   713.000  i/100ms
+           hash-each     3.519k i/100ms
+         reduce-to-i     2.931k i/100ms
+              inject     3.196k i/100ms
+               chunk     1.803k i/100ms
+         reduce-or-0     3.126k i/100ms
+  each-with-hash-new     3.142k i/100ms
+each-with-empty-hash     2.391k i/100ms
+          map-inject    96.000  i/100ms
+            group-by     2.249k i/100ms
+     group-by-itself     2.208k i/100ms
+     chunk-by-itself     1.759k i/100ms
+-------------------------------------------------
+          uniq-count      7.099k (± 6.6%) i/s -     71.300k
+           hash-each     35.206k (± 7.3%) i/s -    351.900k
+         reduce-to-i     29.482k (± 6.2%) i/s -    296.031k
+              inject     33.562k (± 3.7%) i/s -    335.580k
+               chunk     18.543k (± 3.6%) i/s -    185.709k
+         reduce-or-0     32.243k (± 4.2%) i/s -    321.978k
+  each-with-hash-new     32.745k (± 3.6%) i/s -    329.910k
+each-with-empty-hash     25.243k (± 4.0%) i/s -    253.446k
+          map-inject    972.161  (± 4.1%) i/s -      9.792k
+            group-by     23.200k (± 3.8%) i/s -    233.896k
+     group-by-itself     23.159k (± 3.7%) i/s -    231.840k
+     chunk-by-itself     18.782k (± 3.6%) i/s -    188.213k
+
+Comparison:
+           hash-each:    35206.1 i/s
+              inject:    33561.8 i/s - 1.05x slower
+  each-with-hash-new:    32744.6 i/s - 1.08x slower
+         reduce-or-0:    32243.5 i/s - 1.09x slower
+         reduce-to-i:    29482.1 i/s - 1.19x slower
+each-with-empty-hash:    25243.0 i/s - 1.39x slower
+            group-by:    23199.9 i/s - 1.52x slower
+     group-by-itself:    23159.0 i/s - 1.52x slower
+     chunk-by-itself:    18781.6 i/s - 1.87x slower
+               chunk:    18543.2 i/s - 1.90x slower
+          uniq-count:     7099.2 i/s - 4.96x slower
+          map-inject:      972.2 i/s - 36.21x slower
+
+Benching with array of length 1000
+Calculating -------------------------------------
+          uniq-count    86.000  i/100ms
+           hash-each   484.000  i/100ms
+         reduce-to-i   398.000  i/100ms
+              inject   434.000  i/100ms
+               chunk   341.000  i/100ms
+         reduce-or-0   426.000  i/100ms
+  each-with-hash-new   432.000  i/100ms
+each-with-empty-hash   321.000  i/100ms
+          map-inject     7.000  i/100ms
+            group-by   505.000  i/100ms
+     group-by-itself   516.000  i/100ms
+     chunk-by-itself   361.000  i/100ms
+-------------------------------------------------
+          uniq-count    857.236  (± 3.6%) i/s -      8.600k
+           hash-each      4.943k (± 3.6%) i/s -     49.368k
+         reduce-to-i      3.970k (± 3.7%) i/s -     39.800k
+              inject      4.375k (± 4.0%) i/s -     43.834k
+               chunk      3.479k (± 3.8%) i/s -     34.782k
+         reduce-or-0      4.360k (± 3.5%) i/s -     43.878k
+  each-with-hash-new      4.327k (± 3.8%) i/s -     43.632k
+each-with-empty-hash      3.247k (± 3.8%) i/s -     32.421k
+          map-inject     80.253  (± 3.7%) i/s -    805.000
+            group-by      5.078k (± 3.5%) i/s -     51.005k
+     group-by-itself      5.233k (± 3.5%) i/s -     52.632k
+     chunk-by-itself      3.596k (± 3.9%) i/s -     36.100k
+
+Comparison:
+     group-by-itself:     5233.2 i/s
+            group-by:     5078.3 i/s - 1.03x slower
+           hash-each:     4942.9 i/s - 1.06x slower
+              inject:     4375.0 i/s - 1.20x slower
+         reduce-or-0:     4359.6 i/s - 1.20x slower
+  each-with-hash-new:     4326.7 i/s - 1.21x slower
+         reduce-to-i:     3970.0 i/s - 1.32x slower
+     chunk-by-itself:     3596.0 i/s - 1.46x slower
+               chunk:     3478.7 i/s - 1.50x slower
+each-with-empty-hash:     3246.9 i/s - 1.61x slower
+          uniq-count:      857.2 i/s - 6.10x slower
+          map-inject:       80.3 i/s - 65.21x slower
+
+Benching with array of length 10000
+Calculating -------------------------------------
+          uniq-count     8.000  i/100ms
+           hash-each    50.000  i/100ms
+         reduce-to-i    41.000  i/100ms
+              inject    45.000  i/100ms
+               chunk    39.000  i/100ms
+         reduce-or-0    44.000  i/100ms
+  each-with-hash-new    44.000  i/100ms
+each-with-empty-hash    33.000  i/100ms
+          map-inject     1.000  i/100ms
+            group-by    60.000  i/100ms
+     group-by-itself    64.000  i/100ms
+     chunk-by-itself    40.000  i/100ms
+-------------------------------------------------
+          uniq-count     88.714  (± 4.5%) i/s -    888.000
+           hash-each    512.984  (± 3.7%) i/s -      5.150k
+         reduce-to-i    416.381  (± 3.1%) i/s -      4.182k
+              inject    451.721  (± 3.8%) i/s -      4.545k
+               chunk    399.876  (± 4.5%) i/s -      4.017k
+         reduce-or-0    448.765  (± 3.1%) i/s -      4.488k
+  each-with-hash-new    447.137  (± 3.8%) i/s -      4.488k
+each-with-empty-hash    337.212  (± 3.9%) i/s -      3.399k
+          map-inject      7.940  (± 0.0%) i/s -     80.000
+            group-by    619.181  (± 4.4%) i/s -      6.240k
+     group-by-itself    646.468  (± 3.7%) i/s -      6.464k
+     chunk-by-itself    416.987  (± 3.6%) i/s -      4.200k
+
+Comparison:
+     group-by-itself:      646.5 i/s
+            group-by:      619.2 i/s - 1.04x slower
+           hash-each:      513.0 i/s - 1.26x slower
+              inject:      451.7 i/s - 1.43x slower
+         reduce-or-0:      448.8 i/s - 1.44x slower
+  each-with-hash-new:      447.1 i/s - 1.45x slower
+     chunk-by-itself:      417.0 i/s - 1.55x slower
+         reduce-to-i:      416.4 i/s - 1.55x slower
+               chunk:      399.9 i/s - 1.62x slower
+each-with-empty-hash:      337.2 i/s - 1.92x slower
+          uniq-count:       88.7 i/s - 7.29x slower
+          map-inject:        7.9 i/s - 81.42x slower
+
+Benching with array of length 100000
+Calculating -------------------------------------
+          uniq-count     1.000  i/100ms
+           hash-each     5.000  i/100ms
+         reduce-to-i     4.000  i/100ms
+              inject     4.000  i/100ms
+               chunk     4.000  i/100ms
+         reduce-or-0     4.000  i/100ms
+  each-with-hash-new     4.000  i/100ms
+each-with-empty-hash     3.000  i/100ms
+          map-inject     1.000  i/100ms
+            group-by     6.000  i/100ms
+     group-by-itself     6.000  i/100ms
+     chunk-by-itself     4.000  i/100ms
+-------------------------------------------------
+          uniq-count      8.877  (± 0.0%) i/s -     89.000
+           hash-each     51.268  (± 3.9%) i/s -    515.000
+         reduce-to-i     41.491  (± 4.8%) i/s -    416.000
+              inject     45.634  (± 4.4%) i/s -    456.000
+               chunk     40.980  (± 4.9%) i/s -    412.000
+         reduce-or-0     45.178  (± 4.4%) i/s -    452.000
+  each-with-hash-new     44.561  (± 4.5%) i/s -    448.000
+each-with-empty-hash     33.716  (± 3.0%) i/s -    339.000
+          map-inject      0.775  (± 0.0%) i/s -      8.000
+            group-by     64.767  (± 4.6%) i/s -    648.000
+     group-by-itself     67.509  (± 4.4%) i/s -    678.000
+     chunk-by-itself     43.513  (± 4.6%) i/s -    436.000
+
+Comparison:
+     group-by-itself:       67.5 i/s
+            group-by:       64.8 i/s - 1.04x slower
+           hash-each:       51.3 i/s - 1.32x slower
+              inject:       45.6 i/s - 1.48x slower
+         reduce-or-0:       45.2 i/s - 1.49x slower
+  each-with-hash-new:       44.6 i/s - 1.52x slower
+     chunk-by-itself:       43.5 i/s - 1.55x slower
+         reduce-to-i:       41.5 i/s - 1.63x slower
+               chunk:       41.0 i/s - 1.65x slower
+each-with-empty-hash:       33.7 i/s - 2.00x slower
+          uniq-count:        8.9 i/s - 7.61x slower
+          map-inject:        0.8 i/s - 87.08x slower
+
+Benching with array of length 1000000
+Calculating -------------------------------------
+          uniq-count     1.000  i/100ms
+           hash-each     1.000  i/100ms
+         reduce-to-i     1.000  i/100ms
+              inject     1.000  i/100ms
+               chunk     1.000  i/100ms
+         reduce-or-0     1.000  i/100ms
+  each-with-hash-new     1.000  i/100ms
+each-with-empty-hash     1.000  i/100ms
+          map-inject     1.000  i/100ms
+            group-by     1.000  i/100ms
+     group-by-itself     1.000  i/100ms
+     chunk-by-itself     1.000  i/100ms
+-------------------------------------------------
+          uniq-count      0.888  (± 0.0%) i/s -      9.000
+           hash-each      5.140  (± 0.0%) i/s -     52.000
+         reduce-to-i      4.157  (± 0.0%) i/s -     42.000
+              inject      4.616  (± 0.0%) i/s -     47.000
+               chunk      3.988  (± 0.0%) i/s -     40.000
+         reduce-or-0      4.382  (± 0.0%) i/s -     44.000
+  each-with-hash-new      4.090  (±24.5%) i/s -     19.000  in 3599.390018s
+each-with-empty-hash      3.394  (±29.5%) i/s -     34.000
+          map-inject      0.073  (± 0.0%) i/s -      1.000  in  13.668027s
+            group-by      6.490  (± 0.0%) i/s -     65.000
+     group-by-itself      6.652  (± 0.0%) i/s -     67.000
+     chunk-by-itself      3.887  (±25.7%) i/s -     21.000  in 6460.558597s
+
+Comparison:
+     group-by-itself:        6.7 i/s
+            group-by:        6.5 i/s - 1.03x slower
+           hash-each:        5.1 i/s - 1.29x slower
+              inject:        4.6 i/s - 1.44x slower
+         reduce-or-0:        4.4 i/s - 1.52x slower
+         reduce-to-i:        4.2 i/s - 1.60x slower
+  each-with-hash-new:        4.1 i/s - 1.63x slower
+               chunk:        4.0 i/s - 1.67x slower
+     chunk-by-itself:        3.9 i/s - 1.71x slower
+each-with-empty-hash:        3.4 i/s - 1.96x slower
+          uniq-count:        0.9 i/s - 7.49x slower
+          map-inject:        0.1 i/s - 90.93x slower
+
+Benching with array of length 10000000
+Calculating -------------------------------------
+          uniq-count     1.000  i/100ms
+           hash-each     1.000  i/100ms
+         reduce-to-i     1.000  i/100ms
+              inject     1.000  i/100ms
+               chunk     1.000  i/100ms
+         reduce-or-0     1.000  i/100ms
+  each-with-hash-new     1.000  i/100ms
+each-with-empty-hash     1.000  i/100ms
+          map-inject     1.000  i/100ms
+            group-by     1.000  i/100ms
+     group-by-itself     1.000  i/100ms
+     chunk-by-itself     1.000  i/100ms
+-------------------------------------------------
+          uniq-count      0.088  (± 0.0%) i/s -      1.000  in  11.381908s
+           hash-each      0.383  (± 0.0%) i/s -      4.000  in 4503.161134s
+         reduce-to-i      0.477  (± 0.0%) i/s -      5.000  in  10.525100s
+              inject      0.478  (± 0.0%) i/s -      5.000
+               chunk      0.368  (± 0.0%) i/s -      4.000  in  10.855888s
+         reduce-or-0      0.455  (± 0.0%) i/s -      5.000  in  10.985729s
+  each-with-hash-new      0.294  (± 0.0%) i/s -      3.000  in 2263.599769s
+each-with-empty-hash^Cbench.rb:14:in `block (3 levels) in bench': Interrupt
+        from bench.rb:14:in `each'
+        from bench.rb:14:in `each_with_object'
+        from bench.rb:14:in `block (2 levels) in bench'
+        from /Users/carolnichols/.rvm/gems/ruby-2.2.1@occurrence-counting/gems/benchmark-ips-2.3.0/lib/benchmark/ips/job.rb:73:in `call'
+        from /Users/carolnichols/.rvm/gems/ruby-2.2.1@occurrence-counting/gems/benchmark-ips-2.3.0/lib/benchmark/ips/job.rb:73:in `call_times'
+        from /Users/carolnichols/.rvm/gems/ruby-2.2.1@occurrence-counting/gems/benchmark-ips-2.3.0/lib/benchmark/ips/job.rb:279:in `block in run'
+        from /Users/carolnichols/.rvm/gems/ruby-2.2.1@occurrence-counting/gems/benchmark-ips-2.3.0/lib/benchmark/ips/job.rb:259:in `each'
+        from /Users/carolnichols/.rvm/gems/ruby-2.2.1@occurrence-counting/gems/benchmark-ips-2.3.0/lib/benchmark/ips/job.rb:259:in `run'
+        from /Users/carolnichols/.rvm/gems/ruby-2.2.1@occurrence-counting/gems/benchmark-ips-2.3.0/lib/benchmark/ips.rb:59:in `ips'
+        from bench.rb:4:in `bench'
+        from bench.rb:33:in `block in <main>'
+        from bench.rb:30:in `each'
+        from bench.rb:30:in `<main>'
+
+08:16:
